@@ -1,0 +1,2 @@
+if '/' == request.path
+highlight add after

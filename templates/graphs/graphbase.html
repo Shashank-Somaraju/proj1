@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}{{type}}{% endblock %}
+{% block body %}
+<h1>{{type}}</h1>
+<hr>
+<p>Choose Two Variables From Below</p>
+<hr>
+<form action="#" method="post">
+<select class="form-select" aria-label="Default select example" name="first">
+    <option selected>Please select the first parameter</option>
+    <option value="Restaurant">Restaurant</option>
+    <option value="Sales">Sales</option>
+    <option value="YOY_Sales">YOY_sales</option>
+    <option value="Units">Units</option>
+    <option value="YOY_Units">YOY_Units</option>
+</select>
+<hr>
+<select class="form-select" aria-label="Default select example" name="second">
+    <option selected>please select the second parameter</option>
+    <option value="Restaurant">Restaurant</option>
+    <option value="Sales">Sales</option>
+    <option value="YOY_Sales">YOY_sales</option>
+    <option value="Units">Units</option>
+    <option value="YOY_Units">YOY_Units</option>
+</select>
+
+<hr>
+<select class="form-select" aria-label="Default select example" name="third">
+    <option selected>Type of graph</option>
+    <option value="Scatter plot">Scatter plot</option>
+    <option value="Plot">Plot</option>
+    <option value="Bar graph">Bar graph</option>
+</select>
+<hr>
+<p>Enter the sample size(1-250)</p>
+<p><input type="text" name="size"></p>
+<p><input type="submit" value="submit"></p>
+</form>
+{% load static %}
+<p><img src="{% static 'images/image4.png' %}" class= "rounded mx-auto d-block" alt="hello" width=350 height =350></p>
+
+
+
+{% endblock %}
